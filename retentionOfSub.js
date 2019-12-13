@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
 
 function retentionListOfSubs(){
-    const salesMan = readline.question("How many sales persions are working? :- ");
+    const salesMan = readline.question("How many sales persons are working? :- ");
     const salesPerson = parseInt(salesMan);
     const trailPersons = readline.question('How many sign ups are there in a day? :- ');
     const trailPerson = parseInt(trailPersons);
@@ -32,6 +32,8 @@ function retentionListOfSubs(){
 }
 
 const listOfRetentions = retentionListOfSubs();
+// console.log(listOfRetentions);
 // console.log(typeof(listOfRetentions));
-// console.log(JSON.stringify(listOfRetentions));
+console.log(JSON.stringify(listOfRetentions));
 module.exports.listOfRetentions = listOfRetentions;
+
