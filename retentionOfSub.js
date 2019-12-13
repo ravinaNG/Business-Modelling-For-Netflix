@@ -1,8 +1,14 @@
+const readline = require('readline-sync');
+
 function retentionListOfSubs(){
-    const salesPerson = 1;
-    const trailPerson = 20;
-    const noShow = 40;
-    const numberOfWorkingDays = 28;
+    const salesMan = readline.question("How many sales persions are working? :- ");
+    const salesPerson = parseInt(salesMan);
+    const trailPersons = readline.question('How many sign ups are there in a day? :- ');
+    const trailPerson = parseInt(trailPersons);
+    const noShowPerMonth = readline.question('what is the percentage of no show? :- ');
+    const noShow = parseInt(noShowPerMonth);
+    const numOfWorkingDays = readline.question('Working Days? :- ');
+    const numberOfWorkingDays = parseInt(numOfWorkingDays);
     const dicOfSubscribedList = {};
     let month = 1
 
