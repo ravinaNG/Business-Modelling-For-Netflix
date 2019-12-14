@@ -9,6 +9,7 @@ function retentionListOfSubs(){
     const noShow = parseInt(noShowPerMonth);
     const numOfWorkingDays = readline.question('Working Days? :- ');
     const numberOfWorkingDays = parseInt(numOfWorkingDays);
+    
     const dicOfSubscribedList = {};
     let month = 1
 
@@ -16,7 +17,7 @@ function retentionListOfSubs(){
         sinUp = salesPerson*trailPerson*numberOfWorkingDays;
         const firstSubs = sinUp-(sinUp*noShow/100)
         const subscribedList = []
-        const retentionList = [85,75,65,60,57,54,51,49,46,43,41,38,36,34,32,30,28,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,5,4,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+        const retentionList = [85,75,65,60,57,54,51,49,46,43,40,38,36,34,32,30,28,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,5,4,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2]
         let retentionM = 0;
         subscribedList.push(firstSubs);
 
@@ -34,6 +35,6 @@ function retentionListOfSubs(){
 const listOfRetentions = retentionListOfSubs();
 // console.log(listOfRetentions);
 // console.log(typeof(listOfRetentions));
-console.log(JSON.stringify(listOfRetentions));
+// console.log(JSON.stringify(listOfRetentions));
 module.exports.listOfRetentions = listOfRetentions;
 
