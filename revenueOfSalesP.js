@@ -1,13 +1,10 @@
 let retentions = require('./retentionOfSub')
 const readline = require('readline-sync');
 
-const amtOfPerSubscription = readline.question('Amount of per Subscriber:- ');
-let amtPerSubscription = parseInt(amtOfPerSubscription);
-const revenuePerMonth = readline.question('Revenue of Sales persion per month? :- ');
-const revenue = parseInt(revenuePerMonth);
+var amtOfPerSubscription = parseInt(readline.question('Amount of per Subscriber:- '));
+const revenuePerMonth = parseInt(readline.question('Revenue of Sales persion per month? :- '));
 const year = 5;
-const inflationRatePerYear = readline.question('What is the inflation rate in per year? :- ')
-const inflationRate = parseInt(inflationRatePerYear);
+const inflationRatePerYear = parseInt(readline.question('What is the inflation rate in per year? :- '))
 
 let inflationMonth = 12; 
 let rowM = 0;
@@ -25,14 +22,14 @@ for(columnM; columnM<60; columnM++){
         
         if(count === inflationMonth){
             inflationMonth = inflationMonth + 12;
-            let inflation = parseInt(amtOfPerSubscription*inflationRate/100);
-            amtPerSubscription = amtPerSubscription + inflation;
+            let inflation = parseInt(amtOfPerSubscription*inflationRatePerYear/100);
+            amtOfPerSubscription = amtOfPerSubscription + inflation;
         }
         month = "month" + count;
         numberOfSubscriber = numberOfSubscriber + retentions['listOfRetentions'][month][rowM];
         count = count + 1;
     }
-    revenueOfMoth = (numberOfSubscriber*amtPerSubscription*revenue)/100;
+    revenueOfMoth = (numberOfSubscriber*amtOfPerSubscription*revenuePerMonth)/100;
     revenueOfMoth = parseInt(revenueOfMoth);
     dicOfRevenue[month] = revenueOfMoth;
 }
