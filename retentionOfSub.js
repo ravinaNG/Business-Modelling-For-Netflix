@@ -1,5 +1,7 @@
 const readline = require('readline-sync');
 
+const retentionList = [100, 85,75,65,60,57,54,51,49,46,43,40,38,36,34,32,30,28,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,5,4,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2]
+
 function details(){
     const details = {};
     const salesMan = parseInt(readline.question("How many sales persons are working? :- "));
@@ -16,7 +18,6 @@ function details(){
 }
 
 function retentionListOfSubs(detailsOfSalesP){
-    const retentionList = [100, 85,75,65,60,57,54,51,49,46,43,40,38,36,34,32,30,28,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,5,4,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2]
 
     const dicOfSubscribedList = {};
     let month = 1
@@ -50,5 +51,5 @@ const listOfRetentions = retentionListOfSubs(detailsOfSalesP);
 // console.log(listOfRetentions);
 // console.log(typeof(listOfRetentions));
 // console.log(JSON.stringify(listOfRetentions));
-module.exports = {detailsOfSalesP, listOfRetentions}
+module.exports = {detailsOfSalesP, listOfRetentions, retentionList}
 
