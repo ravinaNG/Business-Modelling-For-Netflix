@@ -8,7 +8,7 @@ function retention(){
     for (months; months < (retentionList.length+1); months++){
         new_retention_list = []
         let month_data = (retentionList.length + 1) - months;  
-        // console.log(month_data)
+        
         for (month_data; month_data < 60; month_data++){
             retention_month = parseInt(sinUp*retentionList[month_data -1 ]/100)
             new_retention_list.push(retention_month)
