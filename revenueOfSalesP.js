@@ -12,6 +12,7 @@ let columnM = 0;
 let dicOfRevenue = {};
 
 for(columnM; columnM<60; columnM++){
+    // I took 60 because I need to take data of 60 months.
     let numberOfSubscriber = 0;
     let revenueOfMoth = 0;
     let month = 'month';
