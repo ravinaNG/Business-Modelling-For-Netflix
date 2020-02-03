@@ -51,7 +51,7 @@ function retentionListOfSubs(detailsOfSalesP){
         // list for per month retentions. 
         const subscribedList = []
 
-        // Doing this because  
+        // Doing this because q 
         const lengthOfRetentionList = retentionList.length - (month-1)
         let retentionM = 0;
         
